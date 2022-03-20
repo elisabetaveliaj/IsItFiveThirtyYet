@@ -1,45 +1,62 @@
+/*main*/
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #301840;
+}
+
+/*style of the div*/
+
+.container {
+  margin-top: 12%;
+  text-align: center;
+}
 
 p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3.2vw;
+    font-family:'Alfa Slab One', cursive;
+    font-size: 4.5vw;
     text-align: left;
-    font-weight: 900;
+    font-weight: 500;
     color: #03A6A6;
+    display: inline;
 }
+
+/*button style*/
 
 button {
     font-family: papyrus;
     font-size: 2.5vw;
-    text-align: left;
+    text-align: center;
     margin: auto;
     background-color: #F2B950;
     color: #301840;
     border: none;
     cursor: pointer;
-    padding: 0px 100px;
+    padding: 1% 8%;
 }
 
+button:hover {
+  background-color: #dfa843;
+  box-shadow: 0 12px 16px 0 rgba(28, 208, 221, 0.356), 0 17px 50px 0 rgba(36, 206, 206, 0.19);
+}
+
+/*text of the button reply*/
 
   #demo {
     color: whitesmoke;
-    position: absolute;
-    inline-size: 400px;
     font-size: 2vw;
-    font-weight: 600;
+    font-weight: 100;
   }
 
-  .image {
-      position: fixed;
-      bottom: 16px;
-      right: 16px;
-  }
+  /*making the position responsive in smaller screens*/
 
-  .container {
-    position: absolute;
-    background-color: #301840;
-    width: 500px;
-    border: 80px solid #301840;
-    padding: 0px 70px 70px 70px;
-    margin: 16px;
+  @media screen and (max-width: 667px) {
+    .container {
+    margin-top: 50%;
   }
+  }
+  

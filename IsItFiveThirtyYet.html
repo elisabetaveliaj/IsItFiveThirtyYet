@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>IsItFiveThirtyYet</title>
+    <link rel="stylesheet" href="fivethirty.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
-<body>
-   
-    <p>Clck the button to find out what time of the day is it.</p>
 
-    <button onclick="myFunction()">Try it</button>
-    
+<body>
+
+   <div class="container">
+    <p>IS IT <br>FIVE THIRTY <br>YET?</p>
+    <br> <br>
+
+    <button class="top-button"  onclick="myFunction()">Button me!</button>
+    <br><br>
+
     <p id="demo"></p>
     
     <script>
@@ -24,20 +29,19 @@
                 console.log(d.getDay());
                 var dateValue = d.getDay();
                 if(dateValue === 0 || dateValue === 6)
-                document.getElementById("demo").innerHTML ="It's time to enjoy your weekend.";
+                document.getElementById("demo").innerHTML ="You should be enjoying your weekend right now.";
                 else if (h === 17 && m === 30 ) {
                     console.log(h,m);
-                    document.getElementById("demo").innerHTML = time + " Time to go home immediately.";
+                    document.getElementById("demo").innerHTML = time + " Time to go home. Immediately!";
                 } else if (h > 15 && h <= 17 ) {
-                    document.getElementById("demo").innerHTML = time + " Just a lil more boo.";
-                } else if (h === 17 && m > 30) {
-                    document.getElementById("demo").innerHTML = time + " You should be home already.";
-                } else if (h > 18 && h < 9) {
+                    document.getElementById("demo").innerHTML = time + " Just a lil more.";
+                } else if (h > 17 && m >30 && h < 9) {
                     document.getElementById("demo").innerHTML = time + " It's time to forget about work.";
                 }else {
                     document.getElementById("demo").innerHTML = time + " Patience my child.";
                 }
             }
     </script>
+
 </body>
 </html>
